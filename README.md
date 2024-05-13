@@ -1,2 +1,1 @@
-# typegame
 # Algorithm-study
