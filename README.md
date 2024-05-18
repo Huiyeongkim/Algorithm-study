@@ -12,11 +12,12 @@
 
 ## 2. schedule
 (1) 2024.05.13 월요일
-주제 : 정렬
-벡준 문제 : https://www.acmicpc.net/group/workbook/view/20886/69558
+- 주제 : 정렬
+- 벡준 문제 : https://www.acmicpc.net/group/workbook/view/20886/69558
 
 (2) 2024.05.29 일요일
-주제 : 그리디
-발표자 : 윤예은
-백준 문제 : https://www.acmicpc.net/group/workbook/view/20886/69676
+- 주제 : 그리디
+- 발표자 : 윤예은
+- 백준 문제 : https://www.acmicpc.net/group/workbook/view/20886/69676
 
+<br>
