@@ -1,3 +1,5 @@
+package sort_1week;
+
 import java.util.Comparator;
 import java.util.Scanner;
 import java.util.Arrays;
