@@ -149,7 +149,8 @@ for (int i=0; i<length; i++) {
         }
     }
 
-7. 시간복잡도
+### 6. 시간복잡도
+![](https://velog.velcdn.com/images/hyong/post/209e1b75-e906-462f-8401-3619ae2fb02c/image.png)
 
 (*) 사진 출처 : https://d2.naver.com/helloworld/0315536
 
