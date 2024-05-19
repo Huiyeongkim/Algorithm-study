@@ -37,9 +37,9 @@ public class Main {
 			meetings[i] = new Room(start, end);
 		}
 
-		Arrays.sort(meetings);  //종료 시간으로 정렬
+		Arrays.sort(meetings); 
 		int cnt = 0;
-		int time = 0;  //현재 시간
+		int time = 0; 
 		for (int i = 0; i < num; i++) {
 			if (time <= meetings[i].sTime) {
 				cnt++;
