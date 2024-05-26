@@ -84,12 +84,36 @@ System.out.println(queue.size());
 문제 조건에 맞추어 정렬을 한 후 그리디 알고리즘 과정을 수행한다.
 
 ```java
-
+Arrays.sort(arr);
+for (int i=0; i<m; i++) {
+  long sum = arr[1] + arr[0];
+  arr[0] = sum;
+  arr[1] = sum;
+  Arrays.sort(arr);
+}
+long result = 0;
+for (int i=0; i<n; i++) {
+  result += arr[i];
+}
+System.out.println(result);
 ```
 
 ## 1931 : 회의실 배정
 문제 조건에 맞추어 정렬을 한 후 그리디 알고리즘 과정을 수행한다.
 
 ```java
+Arrays.sort(arr, (o1, o2) -> {
+  if (o1[1]==o2[1]) return o1[0]-o2[0];
+    return o1[1]-o2[1];
+  });
 
+int end = 0;
+int count = 0;
+for (int i=0; i<N; i++) {
+  if (end <= arr[i][0]) {
+    end = arr[i][1];
+    count++;
+  }
+}
+System.out.println(count);
 ```
