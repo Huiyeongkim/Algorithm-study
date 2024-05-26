@@ -18,7 +18,7 @@ public class Main {
 
 		for (int i = 2; i <= num; i++) {
 			dp[i] = dp[i - 1] + 1; // 기본적으로 -1 연산을 하는 경우
-            if (i % 6 == 0) {
+            		if (i % 6 == 0) {
 				dp[i] = Math.min(dp[i / 3] + 1, Math.min(dp[i], dp[i / 2] + 1));
 			} else if (i % 2 == 0) {
 				dp[i] = Math.min(dp[i], dp[i / 2] + 1);
