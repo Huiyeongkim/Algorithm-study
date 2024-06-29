@@ -24,7 +24,6 @@ public class q2293 {
 			coin[i] = Integer.parseInt(br.readLine());
 
 		for(int i = 1; i <= n; i++){
-			//j는 현재 가질 수 있는 가치의 총량을 의미
 			for(int j = coin[0]; j <= k; j++){
 				if(j<coin[i])
 					continue;
