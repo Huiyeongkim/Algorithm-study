@@ -28,7 +28,7 @@ public class Main {
             System.out.println(-1);
         }
 
-        System.out.println(Math.abs(fib)% MOD);
+        System.out.println(Math.abs(fib));
     }
 
     static long Fibonacci(long n) {
@@ -39,7 +39,7 @@ public class Main {
         long b = 1;
 
         for (long i = 2; i <= n; i++) {
-            long sum = (a + b);
+            long sum = (a + b)% MOD;
             a = b;
             b = sum;
         }
