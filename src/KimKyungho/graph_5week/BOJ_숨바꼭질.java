@@ -55,7 +55,7 @@ public class BOJ_숨바꼭질 {
             } else if (distance[i] == maxDistance) {
                 // 헛간 번호가 현재 저장된 헛간 번호보다 작은 경우
                 if (i < maxDisNum) {
-                    maxDistance = i;  // 헛간 번호를 더 작은 번호로 갱신 (만약 거리가 같은 헛간이 여러개면 가장 작은 헛간 번호를 출력한다)
+                    maxDisNum = i;// 헛간 번호를 더 작은 번호로 갱신 (만약 거리가 같은 헛간이 여러개면 가장 작은 헛간 번호를 출력한다)
                 }
                 cnt++;  // 그리고 최대 거리를 갖는 헛간의 개수를 증가
             }
