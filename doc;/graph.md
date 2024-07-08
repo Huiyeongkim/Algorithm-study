@@ -13,7 +13,8 @@
 - A[i]의 연결 노드 확인하는 시간복잡도 O(v)
 - 전체 노드 확인 시간 복잡도 O(n²)
 - 메모리 사용 측면에서 효율적
-- ![image](https://github.com/Huiyeongkim/Algorithm-study/assets/88434735/5ffe59be-623f-4334-a4bc-fd98a1a9d2e0)
+
+![image](https://github.com/Huiyeongkim/Algorithm-study/assets/88434735/5ffe59be-623f-4334-a4bc-fd98a1a9d2e0)
 
 
 ### 2. 인접 행렬 
@@ -21,6 +22,7 @@
 노드 간의 연결여부 빠르게 확인 가능하지만 메모리 소비가 클 수 있음. 
 - A[i][j]의 값은 O(1) 시간복잡도로 확인 가능.
 - A[i]에 연결된 정점은 O(v)인데 정점이 너무 많다면 비효율적임.
+
 ![image](https://github.com/Huiyeongkim/Algorithm-study/assets/88434735/80ccab54-23cc-4158-9d28-e50b273aa019)
 
 ![image](https://github.com/Huiyeongkim/Algorithm-study/assets/88434735/5329654d-4365-4733-bae8-8e409a34c968)
