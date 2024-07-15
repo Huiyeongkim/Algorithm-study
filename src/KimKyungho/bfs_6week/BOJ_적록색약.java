@@ -3,6 +3,16 @@ import java.io.*;
 import java.util.ArrayDeque;
 
 // 10026
+
+/**
+ * 크기가 N×N인 그리드의 각 칸에 R(빨강), G(초록), B(파랑) 중 하나를 색칠한 그림이 있다.
+ * 이 그림에서 구역은 같은 색으로 연결된 칸들로 정의된다. 같은 색상은 상하좌우로 인접해 있는 경우에 같은 구역에 속한다.
+ *
+ * 	•	적록색약 x : 각 색상을 구분 가능
+ * 	•	적록색약 o : 빨강(R)과 초록(G)을 구분하지 못하므로 같은 색상으로 간주
+ *
+ * 	적록색약이 아닌 사람이 봤을 때의 구역의 개수와 적록색약인 사람이 봤을 때의 구역의 수를 공백으로 구분해 출력해라!!
+ */
 public class BOJ_적록색약 {
     static int N;
     static char[][] graph;  // 색상을 입력받은 2차원 배열
@@ -24,6 +34,10 @@ public class BOJ_적록색약 {
             graph[i] = line.toCharArray();
         }
 
+        /**
+         * 적록색약이 아닌 경우와 적록색약인 경우에 구역을 방문처리 하는 방법이 다르므로
+         * 적록색약이 아닌 경우를 구한 후에 visited 배열을 초기화한 후 적록색약인 경우를 구했다.
+         */
         // 적록색약이 아닌 경우
         visited = new boolean[N][N]; // 방문 배열 초기화
         int normal = countRegions(false);
@@ -37,6 +51,12 @@ public class BOJ_적록색약 {
         bw.close();
     }
 
+    /**
+     * 여기서 visited의 각 칸을 탐색하면서 방문하지 않은 칸을 찾는다.
+     * 방문하지 않은 칸을 찾으면, 구역수를 증가시키고, 해당 칸을 시작점으하여 bfs()를 돌면서
+     * 같은 색의 구역을 탐색하며 방문처리를 한다.
+     * -- 적록색약인 경우에는 R과G인 경우 같은 칸으로 판별해야 하므로 if문으로 처리
+     */
     static int countRegions(boolean colorBlind) {
         int regions = 0;
 
