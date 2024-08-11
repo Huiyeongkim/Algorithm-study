@@ -27,7 +27,7 @@ public class Main {
 	}
  
 	static void star(int x, int y, int n, boolean blank) {
- 
+ 		//n 은 지금 사이즈 
 		// 공백
 		if (blank) {
 			for (int i = x; i < x + n; i++) {
@@ -42,15 +42,17 @@ public class Main {
 			matrix[x][y] = '*';
 			return;
 		}
+		
 		//recursive case
 		int nowsize = n/ 3;
 		int count = 0;
-		for (int i = x; i < x + n; i += nowsize) {
+		//가로 3등분, 세로 3등분 총 9등분한다. 
+		for (int i = x; i < x + n; i += nowsize) { 
 			for (int j = y; j < y + n; j += nowsize) {
 				count++;
 				if (count == 5) { // 공백 칸일 경우
 					star(i, j, nowsize, true);
-				} else {
+				} else { //계속 쪼개서 사이즈가 1일때 별찍기. 
 					star(i, j, nowsize, false);
 				}
 			}
