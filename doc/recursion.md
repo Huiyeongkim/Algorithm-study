@@ -5,7 +5,7 @@
 (반복문 : Bottom-up vs 재귀 : Top-down)
 ![image](https://github.com/user-attachments/assets/ea69be7b-cb1d-44f1-98ff-f47e6dfe8863)
 
-## 함수 구
+## 함수 구성
 1. base case(필수) : 재귀 호출 멈추는 조건
 2. recursive case : 재귀 호출 반복할 조건 
 ## 장점
