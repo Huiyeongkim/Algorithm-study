@@ -32,6 +32,9 @@
     return n * factorial(n-1);
 }
 ~~~
+![image](https://github.com/user-attachments/assets/2349530f-8d83-43fb-90c4-3f5bc56cfed7)
+
+
 ~~~
 int factorialTail(int n, int acc){
 	if(n == 1) return acc;
@@ -41,5 +44,8 @@ int factorial(int n){
     return factorialTail(n, 1);
 }
 ~~~
+
+![image](https://github.com/user-attachments/assets/6e8b5500-3909-40c1-80ee-d282e77f11af)
+
     : 자바에선 직접 tail recursion 인터페이스/클래스 생성하여 직접 구현한다.
   참고 블로그 :  https://loosie.tistory.com/790
