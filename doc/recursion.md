@@ -1,5 +1,5 @@
 # 재귀함수 (recursion function)
-
+작성자 : 윤예은
 ## 정의 
 : 함수 내부에서 ‘자기 자신을 호출’하는 함수
 (반복문 : Bottom-up vs 재귀 : Top-down)
