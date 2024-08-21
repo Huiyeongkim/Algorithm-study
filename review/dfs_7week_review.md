@@ -11,7 +11,7 @@
 ## 1012 : 유기농 배추 
 기초적인 이차 DFS 문제 (재귀를 이용해 해결)
 
-'''java
+```java
 public static void DFS(int x, int y) {
         visited[x][y] = true;
 
@@ -24,12 +24,12 @@ public static void DFS(int x, int y) {
             }
         }
     }
-'''
+```
 
 ## 11725 : 트리의 부모 찾기
 기초적인 DFS 문제  (재귀를 이용해 해결)
 
-'''java
+```java
 public static void DFS(int node) {
         visited[node] = true;
 
@@ -40,11 +40,11 @@ public static void DFS(int node) {
             }
         }
     }
-'''
+```
 
 ##  2668 : 숫자고르기 
  (재귀를 이용해 해결)
-'''java
+```java
 public static void DFS(int start, int target) {
         if (!visited[arr[start]]) {
             visited[arr[start]] = true;
@@ -53,12 +53,12 @@ public static void DFS(int start, int target) {
         if (arr[start] == target) list.add(target);
         visited[start] = false;
     }
-'''
+```
 
 ##  24480 : 알고리즘 수업 - 깊이 우선 탐색 2
 기초적인 DFS 연습문제 (재귀를 이용해 해결)
 
-'''java
+```java
 public static void DFS(int R) {
         visited[R] = true;
         arr[R] = count++;
@@ -69,8 +69,4 @@ public static void DFS(int R) {
             }
         }
     }
-'''
-
-
-
-
+```
