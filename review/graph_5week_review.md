@@ -122,7 +122,7 @@ private static void union(int a,int b) {
 ~~~
 
 
-#숨바꼭질 (무방향 -> 양방향 그래프 구현, bfs로 구현)
+# 숨바꼭질 (무방향 -> 양방향 그래프 구현, bfs로 구현)
 ~~~
  static void bfs(){
         Queue<Node> q = new LinkedList<>();
