@@ -17,19 +17,17 @@
 ---
 구현, 시뮬레이션 문제로 승객들의 출발지와 도착지가 겹칠수 있다는 점을 주의하면서 BFS를 이용하여 해결할 수 있다
 
-            while (true) {
-                        Node node = findPassenger();
-                        if (node == null){
-                            flag = false;
-                            break;
-                        }
-
+    while (true) {
+            Node node = findPassenger();
+            if (node == null){
+                 flag = false;
+                 break;
+            }
             visited = new boolean[N][N];
             int destination = map.get(node.x * N + node.y);
             board[node.x][node.y] = 0;
             visited[node.x][node.y] = true;
             queue.add(new Taxi(node.x, node.y, node.remainFuel, 0));
-
             if (!findDestination(destination)) {
                 flag = false;
                 break;
@@ -127,9 +125,8 @@
         private static int[] d1x = {-1, -1, 0, 0, 0, 0, 1, 1, 2}, d1y = {-1, 1, -2, -1, 1, 2, -1, 1, 0};
         private static int[] d2x = {1, -1, 2, 1, -1, -2, 1, -1, 0}, d2y = {-1, -1, 0, 0, 0, 0, 1, 1, 2};
         private static int[] d3x = {1, 1, 0, 0, 0, 0, -1, -1, -2}, d3y = {1, -1, 2, 1, -1, -2, 1, -1, 0};
-
-    private static int tx, ty, direction;
-    private static int answer = 0;
+        private static int tx, ty, direction;
+        private static int answer = 0;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
