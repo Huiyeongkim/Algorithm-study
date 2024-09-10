@@ -114,9 +114,9 @@
 ```
 
 # 20057: 마법사 상어와 토네이도
-```java
 토네이도의 방향별로 다른위치에 모래가 날린다는 사실을 인지하면서 각 방향별로 모래가 날릴위치를 배열로 만들어주고 토네이도가 격자 밖으로 나갈떄까지 반복해주면 해결가능하다.
 
+```java
     public class bj20057_마법사상어와토네이도 {
         private static int N;
         private static int[][] board;
@@ -210,9 +210,9 @@
 ```
 
 # 20058 : 마법사상어와파이어스톰
-```java
 Q값이 0이 될때까지 격자를 나누고 얼음을 녹이고 남아있는 얼음의 합을 출력하고 가장 큰 얼음 덩어리의 칸의 개수를 출력하면 된다
-            
+ 
+ ```java           
             while (Q-- > 0) {
                         int L = Integer.parseInt(st.nextToken());
                         int divide = (int) Math.pow(2, L);
