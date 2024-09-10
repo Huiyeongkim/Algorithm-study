@@ -17,12 +17,12 @@
 ---
 구현, 시뮬레이션 문제로 승객들의 출발지와 도착지가 겹칠수 있다는 점을 주의하면서 BFS를 이용하여 해결할 수 있다
 
-while (true) {
-            Node node = findPassenger();
-            if (node == null){
-                flag = false;
-                break;
-            }
+            while (true) {
+                        Node node = findPassenger();
+                        if (node == null){
+                            flag = false;
+                            break;
+                        }
 
             visited = new boolean[N][N];
             int destination = map.get(node.x * N + node.y);
@@ -118,15 +118,15 @@ while (true) {
 ---
 토네이도의 방향별로 다른위치에 모래가 날린다는 사실을 인지하면서 각 방향별로 모래가 날릴위치를 배열로 만들어주고 토네이도가 격자 밖으로 나갈떄까지 반복해주면 해결가능하다.
 
-public class bj20057_마법사상어와토네이도 {
-    private static int N;
-    private static int[][] board;
-    private static int[] dx = {0, 1, 0, -1}, dy = {-1, 0, 1, 0};
-    private static int[] ratio = {1, 1, 2, 7, 7, 2, 10, 10, 5};
-    private static int[] d0x = {-1, 1, -2, -1, 1, 2, -1, 1, 0}, d0y = {1, 1, 0, 0, 0, 0, -1, -1, -2};
-    private static int[] d1x = {-1, -1, 0, 0, 0, 0, 1, 1, 2}, d1y = {-1, 1, -2, -1, 1, 2, -1, 1, 0};
-    private static int[] d2x = {1, -1, 2, 1, -1, -2, 1, -1, 0}, d2y = {-1, -1, 0, 0, 0, 0, 1, 1, 2};
-    private static int[] d3x = {1, 1, 0, 0, 0, 0, -1, -1, -2}, d3y = {1, -1, 2, 1, -1, -2, 1, -1, 0};
+    public class bj20057_마법사상어와토네이도 {
+        private static int N;
+        private static int[][] board;
+        private static int[] dx = {0, 1, 0, -1}, dy = {-1, 0, 1, 0};
+        private static int[] ratio = {1, 1, 2, 7, 7, 2, 10, 10, 5};
+        private static int[] d0x = {-1, 1, -2, -1, 1, 2, -1, 1, 0}, d0y = {1, 1, 0, 0, 0, 0, -1, -1, -2};
+        private static int[] d1x = {-1, -1, 0, 0, 0, 0, 1, 1, 2}, d1y = {-1, 1, -2, -1, 1, 2, -1, 1, 0};
+        private static int[] d2x = {1, -1, 2, 1, -1, -2, 1, -1, 0}, d2y = {-1, -1, 0, 0, 0, 0, 1, 1, 2};
+        private static int[] d3x = {1, 1, 0, 0, 0, 0, -1, -1, -2}, d3y = {1, -1, 2, 1, -1, -2, 1, -1, 0};
 
     private static int tx, ty, direction;
     private static int answer = 0;
@@ -213,10 +213,10 @@ public class bj20057_마법사상어와토네이도 {
 # 20058: 마법사상어와파이어스톰
 ---
 Q값이 0이 될때까지 격자를 나누고 얼음을 녹이고 남아있는 얼음의 합을 출력하고 가장 큰 얼음 덩어리의 칸의 개수를 출력하면 된다
-
-while (Q-- > 0) {
-            int L = Integer.parseInt(st.nextToken());
-            int divide = (int) Math.pow(2, L);
+            
+            while (Q-- > 0) {
+                        int L = Integer.parseInt(st.nextToken());
+                        int divide = (int) Math.pow(2, L);
 
             for (int i = 0; i < size; i += divide) {
                 for (int j = 0; j < size; j += divide) {
@@ -237,15 +237,15 @@ while (Q-- > 0) {
             }
         }
 ---
-private static void calIce() {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                sum += board[i][j];
-            }
-        }
-    }
-private static void rotate(int row, int column, int size) {
-        int[][] temp = new int[size][size];
+            private static void calIce() {
+                    for (int i = 0; i < size; i++) {
+                        for (int j = 0; j < size; j++) {
+                            sum += board[i][j];
+                        }
+                    }
+                }
+            private static void rotate(int row, int column, int size) {
+                    int[][] temp = new int[size][size];
 
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
