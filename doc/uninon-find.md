@@ -1,8 +1,9 @@
 # Union-Find(Disjoint Set)
----
+작성자 : 박수완
 
 여러 개의 원소가 있을 때, 이 원소들이 어떤 그룹(집합)에 속해 있는지 효율적으로 관리하고, 두 그룹을 합치는 연산을 빠르게 처리할 수 있는 자료구조이다. 이 알고리즘은 그래프에서의 연결 요소나 네트워크 연결
 문제등을 처리할 때 주로 사용된다.
+
 
 # Union-Find 알고리즘의 주요 연산
 ---
@@ -54,8 +55,8 @@ ex) Find(3)을 수행하면, 3부터 1까지의 경로를 거치며 3의 부모�
 경로 압축을 하지 않을 시 최악의 경우 부모 노드를 찾는 데 O(N)까지 걸린다.
 
 # 구현
----
 
+'''java
     private static void union(int a, int b) {
         int ap = findParent(a);
         int bp = findParent(b);
@@ -66,4 +67,5 @@ ex) Find(3)을 수행하면, 3부터 1까지의 경로를 거치며 3의 부모�
         if (x == parent[x]) return parent[x];
         else return parent[x] = findParent(parent[x]); // 경로 압축
     }
-   
+
+'''
