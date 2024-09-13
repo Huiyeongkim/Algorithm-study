@@ -56,7 +56,8 @@ ex) Find(3)을 수행하면, 3부터 1까지의 경로를 거치며 3의 부모�
 
 # 구현
 
-'''java
+```java
+
     private static void union(int a, int b) {
         int ap = findParent(a);
         int bp = findParent(b);
@@ -68,4 +69,4 @@ ex) Find(3)을 수행하면, 3부터 1까지의 경로를 거치며 3의 부모�
         else return parent[x] = findParent(parent[x]); // 경로 압축
     }
 
-'''
+```
