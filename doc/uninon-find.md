@@ -1,10 +1,10 @@
 # Union-Find(Disjoint Set)
 ---
 
-여러 개의 원소가 있을 때, 이 원소들이 어떤 그룹(집합)에 속해 있는지 효율적으로 관리하고, 두 그룹을 합치는 연산을 빠르게 처리할 수 있는 자료구조이다. 이 알로길즈믕ㄴ 그래프에서의 연결 요소나 네트워크 연결
+여러 개의 원소가 있을 때, 이 원소들이 어떤 그룹(집합)에 속해 있는지 효율적으로 관리하고, 두 그룹을 합치는 연산을 빠르게 처리할 수 있는 자료구조이다. 이 알고리즘은 그래프에서의 연결 요소나 네트워크 연결
 문제등을 처리할 때 주로 사용된다.
 
-# Uninn-Find 알로리즘의 주요 연산
+# Uninn-Find 알고리즘의 주요 연산
 ---
 
 1. Find(찾기): 주어진 원소가 어느 집합에 속해 있는지를 찾는다. 부모 노드를 반환하는 연산으로 해당 집합의 "루트"를 찾는다.
@@ -31,7 +31,7 @@ Find(1) 연산
 
 Find(2) 연산
 
-2의 부모는 1이므러, Find(2)의 결과는 1이다.(1과 2는 같은 집합에 속함)
+2의 부모는 1이므로, Find(2)의 결과는 1이다.(1과 2는 같은 집합에 속함)
 
 Union(2, 4) 연산: 2와 4를 같은 집합으로 합친다. 이제 1, 2, 3, 4가 같은 집합에 속한다.
 
@@ -54,11 +54,11 @@ Find(3) 연산
     private static void union(int a, int b) {
         int ap = findParent(a);
         int bp = findParent(b);
-        parent[bp] = ap;
+        if(ap != bp) parent[bp] = ap;
     }
 
     private static int findParent(int x) {
         if (x == parent[x]) return parent[x];
-        else return parent[x] = findParent(parent[x]);
+        else return parent[x] = findParent(parent[x]); // 경로 압축
     }
    
